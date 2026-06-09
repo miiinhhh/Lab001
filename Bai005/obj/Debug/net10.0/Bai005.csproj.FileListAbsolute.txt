@@ -1,0 +1,14 @@
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\bin\Debug\net10.0\Bai005.exe
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\bin\Debug\net10.0\Bai005.deps.json
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\bin\Debug\net10.0\Bai005.runtimeconfig.json
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\bin\Debug\net10.0\Bai005.dll
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\bin\Debug\net10.0\Bai005.pdb
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\Bai005.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\Bai005.AssemblyInfoInputs.cache
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\Bai005.AssemblyInfo.cs
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\Bai005.csproj.CoreCompileInputs.cache
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\Bai005.dll
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\refint\Bai005.dll
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\Bai005.pdb
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\Bai005.genruntimeconfig.cache
+C:\Users\phamh\OneDrive\Máy tính\C#\Lab\Lab001\Bai005\obj\Debug\net10.0\ref\Bai005.dll
