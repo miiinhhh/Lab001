@@ -9,20 +9,24 @@ namespace Bai004
         public double Balance{ get; set; }
 
         private List<Transaction> history = new List<Transaction>();
+
+        // Nạp tiền vào tài khoản
         public void Deposit(double amount)
         {
             Balance += amount;
             Transaction transaction = new Transaction
             {
-                type = "Deposit",
+                transactionType = TransactionType.Deposit,
                 amount = amount,
                 date = DateTime.Now
             };
             history.Add(transaction);
         }
+
+        // Rút tiền từ tài khoản
          public void Withdraw(double amount)
         {
-            if (amount > Balance)
+            if (ValidateWithdraw(amount) == false)
             {
                 Console.WriteLine("Insufficient funds.");
                 return;
@@ -30,15 +34,17 @@ namespace Bai004
             Balance -= amount;
             Transaction transaction = new Transaction
             {
-                type = "Withdraw",
+                transactionType = TransactionType.Withdraw,
                 amount = amount,
                 date = DateTime.Now
             };
             history.Add(transaction);
         }
+
+        // Chuyển tiền giữa hai tài khoản
         public void Transfer(BankAccount targetAccount, double amount)
         {
-            if (amount > Balance)
+            if (ValidateWithdraw(amount) == false)
             {
                 Console.WriteLine("Insufficient funds.");
                 return;
@@ -48,7 +54,7 @@ namespace Bai004
 
             Transaction transaction = new Transaction
             {
-                type = "Transfer Out",
+                transactionType = TransactionType.Transfer,
                 amount = amount,
                 date = DateTime.Now
             };
@@ -56,11 +62,17 @@ namespace Bai004
 
             Transaction targetTransaction = new Transaction
             {
-                type = "Transfer In",
+                transactionType = TransactionType.Transfer,
                 amount = amount,
                 date = DateTime.Now
             };
             targetAccount.history.Add(targetTransaction);
+        }
+
+        //hàm validate khi rút tiền
+        public bool ValidateWithdraw(double amount)
+        {
+            return amount <= Balance;
         }
     }
 }
