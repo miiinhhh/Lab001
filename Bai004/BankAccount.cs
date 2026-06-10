@@ -35,6 +35,32 @@ namespace Bai004
                 date = DateTime.Now
             };
             history.Add(transaction);
-        }   
+        }
+        public void Transfer(BankAccount targetAccount, double amount)
+        {
+            if (amount > Balance)
+            {
+                Console.WriteLine("Insufficient funds.");
+                return;
+            }
+            Balance -= amount;
+            targetAccount.Balance += amount;
+
+            Transaction transaction = new Transaction
+            {
+                type = "Transfer Out",
+                amount = amount,
+                date = DateTime.Now
+            };
+            history.Add(transaction);
+
+            Transaction targetTransaction = new Transaction
+            {
+                type = "Transfer In",
+                amount = amount,
+                date = DateTime.Now
+            };
+            targetAccount.history.Add(targetTransaction);
+        }
     }
 }
