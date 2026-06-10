@@ -2,7 +2,7 @@ using System;
 
 namespace Bai004
 {
-    class BankAccount
+    abstract class BankAccount
     {
         public int AccountNumber{ get; set; }
         public string? Holder{ get; set; }
@@ -23,23 +23,8 @@ namespace Bai004
             history.Add(transaction);
         }
 
-        // Rút tiền từ tài khoản
-         public void Withdraw(double amount)
-        {
-            if (ValidateWithdraw(amount) == false)
-            {
-                Console.WriteLine("Insufficient funds.");
-                return;
-            }
-            Balance -= amount;
-            Transaction transaction = new Transaction
-            {
-                transactionType = TransactionType.Withdraw,
-                amount = amount,
-                date = DateTime.Now
-            };
-            history.Add(transaction);
-        }
+        // Rút tiền từ tài khoản 
+        public abstract void Withdraw(double amount);
 
         // Chuyển tiền giữa hai tài khoản
         public void Transfer(BankAccount targetAccount, double amount)
